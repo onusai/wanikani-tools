@@ -61,15 +61,13 @@
          </div>
          <div id="lists">
             <div class="klist">
-               <h4>
-               Unlocked {{unlocked_kanji.length}}</h3>
+               <h4>Unlocked {{unlocked_kanji.length}}</h4>
                <ul>
                   <li v-for="item in unlocked_kanji"><a :href="'https://www.wanikani.com/kanji/'+item[2]" target="_blank">{{item[0]}} <span style="font-size: 12px; margin-left: 10px;">{{item[1]}}</span></a></li>
                </ul>
             </div>
             <div class="klist">
-               <h4>
-               Locked {{locked_kanji.length}}</h3>
+               <h4>Locked {{locked_kanji.length}}</h4>
                <ul>
                   <li v-for="item in locked_kanji"><a :href="'https://www.wanikani.com/kanji/'+item[2]" target="_blank">{{item[0]}} <span style="font-size: 12px; margin-left: 10px;">{{item[1]}}</span></a></li>
                </ul>
