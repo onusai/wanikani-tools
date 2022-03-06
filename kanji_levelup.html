@@ -56,7 +56,7 @@
          <p class="desc">(assuming you guru-ed all your previous radicals)</p>
          <div class="form-input">
             <input v-model="API_TOKEN" id="input-api" type="text" placeholder="API token" title="Paste your WaniKani API token here">
-            <input @submit="go" v-model="LEVEL" id="input-level" type="text" placeholder="level" title="Enter a level between 1 and 60">
+            <input v-model="LEVEL" id="input-level" type="text" placeholder="level" title="Enter a level between 1 and 60">
             <input id="input-go" type="button" value="go" @click="go">
          </div>
          <div id="lists">
@@ -119,7 +119,7 @@
                    this.process_kanji();
                  })
                  .catch(function() {
-                   console.log('radical Code Error!');
+                   console.log('Radical Code Error!');
                  });
              },
              process_kanji() {
@@ -149,7 +149,7 @@
                    });
                  })
                  .catch(function() {
-                   console.log('kanji Code Error!');
+                   console.log('Kanji Code Error!');
                  });
              }
            },
