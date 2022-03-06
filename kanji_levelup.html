@@ -97,7 +97,7 @@
                  'Bearer ' + this.API_TOKEN
                );
          
-              if (this.radicals.length > 0) {
+              if (Object.keys(this.radicals).length > 0) {
                 this.process_kanji();
               } else {
                 this.load_radicals();
