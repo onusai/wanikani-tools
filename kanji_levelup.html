@@ -8,7 +8,7 @@
       display: flex;
       justify-content: center;
       margin-top: 20px;
-      font-family: "Meiryo";
+	  font-family: "Meiryo";
       }
       input {
       margin-right: 10px;
@@ -23,7 +23,7 @@
       #lists {
       display: flex;
       justify-content: space-between;
-      font-family: "Meiryo";
+	  font-family: "Meiryo";
       }
       .klist {
       display: flex;
@@ -50,6 +50,13 @@
       h4 {
       margin-bottom: 0;
       }
+	  li span {
+		color: white;
+	  }
+	  li:hover span{
+		color: black;
+	  }
+
    </style>
    <body>
       <script src="https://unpkg.com/vue@3"></script>
@@ -65,13 +72,13 @@
             <div class="klist">
                <h4>Unlocked {{unlocked_kanji.length}}</h4>
                <ul>
-                  <li v-for="item in unlocked_kanji"><a :href="'https://www.wanikani.com/kanji/'+item[2]" target="_blank">{{item[0]}} <span style="font-size: 12px; margin-left: 10px;">{{item[1]}}</span></a></li>
+                  <li v-for="item in unlocked_kanji"><a :href="'https://www.wanikani.com/kanji/'+item[2]" target="_blank">{{item[0]}} <span class="k-meaning" style="font-size: 12px; margin-left: 10px;">{{item[1]}}</span></a></li>
                </ul>
             </div>
             <div class="klist">
                <h4>Locked {{locked_kanji.length}}</h4>
                <ul>
-                  <li v-for="item in locked_kanji"><a :href="'https://www.wanikani.com/kanji/'+item[2]" target="_blank">{{item[0]}} <span style="font-size: 12px; margin-left: 10px;">{{item[1]}}</span></a></li>
+                  <li v-for="item in locked_kanji"><a :href="'https://www.wanikani.com/kanji/'+item[2]" target="_blank">{{item[0]}} <span class="k-meaning" style="font-size: 12px; margin-left: 10px;">{{item[1]}}</span></a></li>
                </ul>
             </div>
          </div>
